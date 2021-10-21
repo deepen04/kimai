@@ -19,6 +19,9 @@ kubectl create namespace kube-system
 2. helm repo update
 3. helm install nginx-ingress ingress-nginx/ingress-nginx --set controller.publishService.enabled=true -n kube-system
 
+## Check the resoures created
+kubectl get all -n kube-system
+
 ## Clone the kimai repo containing Dockerfile and other dependencies and build image
 1. git clone https://github.com/tobybatch/kimai2.git
 2. cd kimai2
@@ -37,8 +40,12 @@ docker tag kimai:latest 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai:lates
 
 ## Push local image to ECR
 docker push 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai:latest
+  
+## Create R53 hosted zone and add record
+1. ![image](https://user-images.githubusercontent.com/86881823/138298752-1bf349a2-d008-4510-99d4-a3d343b1873d.png)
 
-## Create K8s manifest files to use pushed image
+
+## Create K8s manifest files to deploy the micro service
 1. Deploy
 2. Service
 3. Ingress
