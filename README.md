@@ -42,8 +42,9 @@ docker tag kimai:latest 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai:lates
 docker push 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai:latest
   
 ## Create R53 hosted zone and add record
-1. ![image](https://user-images.githubusercontent.com/86881823/138298752-1bf349a2-d008-4510-99d4-a3d343b1873d.png)
+![image](https://user-images.githubusercontent.com/86881823/138298752-1bf349a2-d008-4510-99d4-a3d343b1873d.png)
 
+![image](https://user-images.githubusercontent.com/86881823/138299042-fe3f0ef0-a915-4e38-991e-9ba233ecf508.png)
 
 ## Create K8s manifest files to deploy the micro service
 1. Deploy
