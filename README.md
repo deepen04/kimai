@@ -44,7 +44,7 @@ docker push 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai:latest
 ## Create R53 hosted zone
 ![image](https://user-images.githubusercontent.com/86881823/138298752-1bf349a2-d008-4510-99d4-a3d343b1873d.png)
 
-## Add record to the HZ
+## Add a A record, assuming the IP (1.1.1.1) of nginx controller LB
 ![image](https://user-images.githubusercontent.com/86881823/138299042-fe3f0ef0-a915-4e38-991e-9ba233ecf508.png)
 
 ## Create K8s manifest files to deploy the micro service
