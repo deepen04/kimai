@@ -2,12 +2,22 @@
 1. kubectl
 2. eksctl
 3. docker
+4. awscli
+5. helm
 
 ## Create EKS cluster
 eksctl create cluster --name kimai-app --version 1.18.0 --region us-east-1 --node-group-name kimai-app-node --node-type t2.micro --node 2
 
 ## Check node status
 kubectl get nodes
+
+## Create namespace for Nginx Controller components
+kubectl create namespace kube-system
+
+## Create Nginx Ingress Controller
+1. helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+2. helm repo update
+3. helm install nginx-ingress ingress-nginx/ingress-nginx --set controller.publishService.enabled=true -n kube-system
 
 ## Clone the kimai repo containing Dockerfile and other dependencies and build image
 1. git clone https://github.com/tobybatch/kimai2.git
@@ -32,6 +42,7 @@ docker push 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai:latest
 1. Deploy
 2. Service
 3. Ingress
+4. HPA
 
 
 
