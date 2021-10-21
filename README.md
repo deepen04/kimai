@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/86881823/138300652-815045a5-92af-47c0-9819-f17759bae7a0.png)
 
 ## Login via Linux machine
-ssh -i deepen.pem ec2-user@<ip>
+ssh -i deepen.pem ec2-user@ip_address
 ## Login via Windows machine
 ## Convert pem to ppk and use putty to login
 ![image](https://user-images.githubusercontent.com/86881823/138301298-c8dc8c35-0d99-4844-8846-246fb0b804b1.png)
