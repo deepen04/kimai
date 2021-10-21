@@ -10,7 +10,7 @@ ssh -i deepen.pem ec2-user@ip_address
 ## Save ppk file in auth
 ![image](https://user-images.githubusercontent.com/86881823/138301704-49a7b79d-d28f-49d6-b49f-42563b26b1df.png)
   
-### After login follow below steps -
+## After login follow below steps -
 
 ## Install below binaries as pre-reqs
 1. kubectl
