@@ -23,7 +23,7 @@ kubectl create namespace kube-system
 1. git clone https://github.com/tobybatch/kimai2.git
 2. cd kimai2
 3. docker build -t kimai .
-4. docker run -d -p 8001:8001 --name kimai node-docker (to test if the image works)
+4. docker run -d -p 8001:8001 --name kimai kimai (to test if the image works)
 
 ## Create ECR to store locally built image
 aws ecr create-repository --reposritory-name kimai --region us-east-1
