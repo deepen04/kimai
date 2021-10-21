@@ -1,7 +1,13 @@
-## Pre-reqs
+## Install below binaries as pre-reqs
 1. kubectl
 2. eksctl
 3. docker
+
+## Create EKS cluster
+eksctl create cluster --name kimai-app --version 1.18.0 --region us-east-1 --node-group-name kimai-app-node --node-type t2.micro --node 2
+
+## Check node status
+kubectl get nodes
 
 ## Clone the kimai repo containing Dockerfile and other dependencies and build image
 1. git clone https://github.com/tobybatch/kimai2.git
