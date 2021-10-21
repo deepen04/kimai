@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kimai
-  namespace: default
 spec:
   replicas: 2
   selector:
@@ -17,4 +16,11 @@ spec:
         - name: kimai-deploy
           image: 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai:latest
           ports:
-            - containerPort: 8001
+          - containerPort: 8001
+          resources:
+            requests:
+              cpu: 100m
+              memory: 50Mi
+            limits:
+              cpu: 200m
+              memory: 100Mi
