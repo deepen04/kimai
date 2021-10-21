@@ -25,7 +25,7 @@ kubectl create namespace kube-system
 3. docker build -t kimai .
 4. docker run -d -p 8001:8001 --name kimai kimai (to test if the image works)
 
-## Create ECR to store locally built image
+## Create ECR to store local image to remote
 aws ecr create-repository --reposritory-name kimai --region us-east-1
 
 ## Authenticate docker to ECR
