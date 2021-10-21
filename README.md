@@ -16,7 +16,7 @@ aws ecr create-repository --reposritory-name kimai --region us-east-1
 1. aws ecr get-login-password --region us-east-1
 2. aws ecr --region us-east-1|docker login -u AWS -p <token> 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai
 
-**## Tag docker image**
+## Tag docker image
 docker tag kimai:latest 694397500817.dkr.ecr.us-east-1.amazonaws.com/kimai:latest
 
 ## Push local image to ECR
