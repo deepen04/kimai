@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: php-apache
+  name: hpa-kimai
 spec:
   minReplicas: 3
   maxReplicas: 6
